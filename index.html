@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+  <head>
+    <title>PrestaShop Installation Assistant</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache" content="no store" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta name="robots" content="noindex" />
+    <link rel="shortcut icon" href="theme/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" media="all" href="theme/view.css?version=8.0.2" />
+
+    
+    <script type="text/javascript" src="../js/jquery/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery/jquery-migrate-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery/plugins/jquery.chosen.js"></script>
+
+    <script src="theme/js/sprintf.min.js" integrity="sha512-pmG0OkYtZVB2EqETE5HPsEaok7sNZFfStp5rNdpHv0tGQjbt1z8Qjzhtx88/4wsttOtDwq5DZGJyKyzEe7ribg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="theme/js/zxcvbn.js" integrity="sha512-TZlMGFY9xKj38t/5m2FzJ+RM/aD5alMHDe26p0mYUMoCF5G7ibfHUQILq0qQPV3wlsnCwL+TPRNK4vIWGLOkUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript" src="theme/js/install.js"></script>
+          <script type="text/javascript" src="theme/js/welcome.js?version=8.0.2"></script>
+        <script type="text/javascript">
+      var ps_base_uri = '/install';
+      var ps_version = '8.0.2';
+    </script>
+  </head>
+
+  <body>
+    <div id="container">
+
+      <!-- Header -->
+<div id="header" class="clearfix">
+  <ul id="headerLinks">
+                  <li>
+          <a href="https://devdocs.prestashop.com/" target="_blank" rel="noopener noreferrer">
+            Documentation          </a>
+        </li>
+              <li>
+          <a href="https://build.prestashop.com/" target="_blank" rel="noopener noreferrer">
+            Blog          </a>
+        </li>
+            </ul>
+
+  <div id="PrestaShopLogo">PrestaShop</div>
+</div>
+
+      <!-- Ajax loader animation -->
+      <div id="loaderSpace">
+        <div id="loader">&nbsp;</div>
+      </div>
+
+      <div id="leftpannel">
+  <ol id="tabs">
+                  <li class="selected">Choose your language</li>
+                        <li>License agreements</li>
+                        <li>System compatibility</li>
+                        <li>Store information</li>
+                        <li>Content of your store</li>
+                        <li>System configuration</li>
+                        <li>Store installation</li>
+            </ol>
+
+  </div>
+
+      <!-- Page content -->
+      <form id="mainForm" action="index.php" method="post">
+        <div id="sheets" class="sheet shown">
+          <div id="sheet_welcome" class="sheet shown clearfix">
+            <div class="contentTitle">
+              <h1>Installation Assistant</h1>
+              <ul id="stepList_1" class="stepList clearfix">
+                                  <li >Choose your language</li>
+                                  <li >License agreements</li>
+                                  <li >System compatibility</li>
+                                  <li >Store information</li>
+                                  <li >Content of your store</li>
+                                  <li >System configuration</li>
+                                  <li >Store installation</li>
+                              </ul>
+            </div>
+            <noscript>
+              <h4 class="errorBlock" style="margin-bottom:10px">
+                To install PrestaShop, you need to have JavaScript enabled in your browser.                <a href="https://enable-javascript.com/" target="_blank" rel="noopener noreferrer">
+                  <img src="theme/img/help.png" style="height:16px;width:16px" />
+                </a>
+              </h4>
+            </noscript>
+
+            <div>
+              
+
+<h2>Welcome to the PrestaShop 8.0.2 Installer</h2>
+
+<p>
+  Installing PrestaShop is quick and easy. In just a few moments, you will become part of a community consisting of more than 300,000 merchants. You are on the way to creating your own unique online store that you can manage easily every day.</p>
+
+
+  <h3>Continue the installation in:</h3>
+  <select id="langList" name="language">
+          <option
+        value="bs"
+              >
+
+        Bosanski (Bosnian)      </option>
+          <option
+        value="ca"
+              >
+
+        Català (Catalan)      </option>
+          <option
+        value="da"
+              >
+
+        Dansk (Danish)      </option>
+          <option
+        value="de"
+              >
+
+        Deutsch (German)      </option>
+          <option
+        value="et"
+              >
+
+        Eesti keel (Estonian)      </option>
+          <option
+        value="en"
+                  selected="selected"
+              >
+
+        English (English)      </option>
+          <option
+        value="es"
+              >
+
+        Español (Spanish)      </option>
+          <option
+        value="mx"
+              >
+
+        Español MX (Spanish)      </option>
+          <option
+        value="fr"
+              >
+
+        Français (French)      </option>
+          <option
+        value="qc"
+              >
+
+        Français CA (French)      </option>
+          <option
+        value="gl"
+              >
+
+        Galego (Galician)      </option>
+          <option
+        value="hr"
+              >
+
+        Hrvatski (Croatian)      </option>
+          <option
+        value="id"
+              >
+
+        Indonesia (Indonesia)      </option>
+          <option
+        value="it"
+              >
+
+        Italiano (Italian)      </option>
+          <option
+        value="lv"
+              >
+
+        Latvija (Latvian)      </option>
+          <option
+        value="hu"
+              >
+
+        Magyar (Hungarian)      </option>
+          <option
+        value="nl"
+              >
+
+        Nederlands (Dutch)      </option>
+          <option
+        value="no"
+              >
+
+        Norsk (Norwegian)      </option>
+          <option
+        value="pl"
+              >
+
+        Polski (Polish)      </option>
+          <option
+        value="br"
+              >
+
+        Português (Brasil)      </option>
+          <option
+        value="pt"
+              >
+
+        Português (Portuguese)      </option>
+          <option
+        value="ro"
+              >
+
+        Română (Romanian)      </option>
+          <option
+        value="sq"
+              >
+
+        Shqip (Albanian)      </option>
+          <option
+        value="sk"
+              >
+
+        Slovenčina (Slovak)      </option>
+          <option
+        value="sr"
+              >
+
+        Srpski (Serbian)      </option>
+          <option
+        value="fi"
+              >
+
+        Suomi (Finnish)      </option>
+          <option
+        value="sv"
+              >
+
+        Svenska (Swedish)      </option>
+          <option
+        value="tr"
+              >
+
+        Türkçe (Turkish)      </option>
+          <option
+        value="lt"
+              >
+
+        lietuvių kalba (Lithuanian)      </option>
+          <option
+        value="si"
+              >
+
+        slovenski jezik (Slovene)      </option>
+          <option
+        value="vn"
+              >
+
+        tiếng Việt (Vietnamese)      </option>
+          <option
+        value="cs"
+              >
+
+        Čeština (Czech)      </option>
+          <option
+        value="el"
+              >
+
+        ελληνικά (Greek)      </option>
+          <option
+        value="ru"
+              >
+
+        Русский (Russian)      </option>
+          <option
+        value="uk"
+              >
+
+        Українська (Ukrainian)      </option>
+          <option
+        value="bg"
+              >
+
+        български език (Bulgarian)      </option>
+          <option
+        value="mk"
+              >
+
+        македонски јазик (Macedonian)      </option>
+          <option
+        value="he"
+              >
+
+        עברית (Hebrew)      </option>
+          <option
+        value="fa"
+              >
+
+        پارسی (Persian)      </option>
+          <option
+        value="hi"
+              >
+
+        हिन्दी (Hindi)      </option>
+          <option
+        value="bn"
+              >
+
+        বাংলা  (Bengali)      </option>
+          <option
+        value="ar"
+              >
+
+        ‫العربية (Arabic)      </option>
+          <option
+        value="ja"
+              >
+
+        日本語 (Japanese)      </option>
+          <option
+        value="zh"
+              >
+
+        简体字 (Simplified Chinese)      </option>
+          <option
+        value="tw"
+              >
+
+        繁體中文 (Traditional Chinese)      </option>
+          <option
+        value="ko"
+              >
+
+        한국어 (Korean)      </option>
+      </select>
+
+<p>
+  The language selection above only applies to the Installation Assistant. Once your store is installed, you can choose the language of your store from over 60 translations, all for free!</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="buttons">
+                                    <input id="btNext" class="button little" type="submit" name="submitNext" value="Next" />
+                      
+                  </div>
+      </form>
+
+          </div>
+
+    <ul id="footer">
+            <li>
+        <a href="http://prestashop-project.org/" target="_blank" rel="noopener noreferrer">
+          PrestaShop Project        </a>
+        |
+      </li>
+          <li>
+        <a href="https://devdocs.prestashop.com/" target="_blank" rel="noopener noreferrer">
+          Documentation        </a>
+        |
+      </li>
+      
+  <li>&copy; 2007-2023</li>
+</ul>
+  </body>
+</html>

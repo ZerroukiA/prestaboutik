@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prestashop-configmap
+  namespace: prestaboutik
+data:
+  SHOP_NAME: wshboutik
